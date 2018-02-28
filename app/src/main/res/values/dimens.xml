@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="app_title">40sp</dimen>
+    <dimen name="flag_width">150dp</dimen>
+    <dimen name="flag_height">90dp</dimen>
+    <dimen name="score_points">56sp</dimen>
+    <dimen name="goal_button">20sp</dimen>
+    <dimen name="card_width">50dp</dimen>
+    <dimen name="card_height">80dp</dimen>
+    <dimen name="card_points">30sp</dimen>
+    <dimen name="img_fault_widht">120dp</dimen>
+    <dimen name="img_fault_height">1500dp</dimen>
+</resources>

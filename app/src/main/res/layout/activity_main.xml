@@ -2,164 +2,116 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/white"
+    android:background="@color/app_background"
     android:orientation="vertical">
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="1.3">
+    <!-- Relative score layout container -->
+
+    <RelativeLayout style="@style/top_relative_layout">
+
+        <!-- Score background image -->
 
         <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            android:scaleType="centerCrop"
+            style="@style/img_score_background"
             android:src="@drawable/img_stadium" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
+        <!-- Maine score layout container -->
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@android:color/black">
+        <LinearLayout style="@style/main_linear_layout">
+
+            <!-- App title / Background color -->
+
+            <LinearLayout style="@style/app_title_layout">
+
+                <!-- App name -->
 
                 <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="8dp"
-                    android:layout_marginTop="8dp"
-                    android:fontFamily="serif-monospace"
-                    android:gravity="center"
-                    android:text="S C O R E"
-                    android:textColor="@android:color/white"
-                    android:textSize="40sp"
-                    android:textStyle="bold" />
+                    style="@style/txt_app_title"
+                    android:text="@string/txt_score" />
 
             </LinearLayout>
 
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="2dp"
-                android:background="@android:color/darker_gray" />
+            <!-- Shadow line -->
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:orientation="horizontal">
+            <View style="@style/horizontal_shadow_line" />
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:orientation="vertical">
+            <!-- Score layout container -->
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="vertical">
+            <LinearLayout style="@style/score_layout">
 
-                        <TextView
-                            style="@style/CountryName"
-                            android:text="@string/romania" />
+                <!-- Team 1 score layout container -->
 
-                        <ImageView
-                            android:layout_width="150dp"
-                            android:layout_height="70dp"
-                            android:layout_gravity="center"
-                            android:paddingBottom="8dp"
-                            android:src="@drawable/img_romania_flag_list" />
+                <LinearLayout style="@style/country_layout">
 
-                    </LinearLayout>
+                    <!-- Team 1 contry name -->
 
-                    <View
-                        android:layout_width="match_parent"
-                        android:layout_height="2dp"
-                        android:layout_marginLeft="20dp"
-                        android:layout_marginRight="20dp"
-                        android:background="@android:color/black" />
+                    <TextView
+                        android:id="@+id/team1_country_name"
+                        style="@style/CountryName"
+                        android:text="@string/romania" />
 
+                    <!-- Team 1 flag image -->
+
+                    <ImageView
+                        android:id="@+id/team1_flag"
+                        style="@style/img_flag"
+                        android:src="@drawable/img_romania_flag" />
+
+                    <!-- Team 1 score delimiter horizontal line -->
+
+                    <View style="@style/score_delimiter_line" />
+
+                    <!-- Score points -->
 
                     <TextView
                         android:id="@+id/team1_score"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="sans-serif-light"
-                        android:gravity="center"
-                        android:text="0"
-                        android:textColor="@android:color/black"
-                        android:textSize="56sp"
-                        android:textStyle="bold" />
+                        style="@style/txt_score_points"
+                        android:text="@string/team1_score" />
+
+                    <!-- Goal button -->
 
                     <Button
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
+                        style="@style/button_goal"
                         android:onClick="addScoreT1"
-                        android:text="GOAL!"
-                        android:textSize="20sp" />
+                        android:text="@string/txt_goal" />
 
                 </LinearLayout>
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:orientation="vertical">
+                <!-- Team 2 score layout container -->
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
+                <LinearLayout style="@style/country_layout">
 
-                        <TextView
-                            style="@style/CountryName"
-                            android:text="@string/france" />
+                    <!-- Team 2 country name -->
 
-                        <ImageView
-                            android:layout_width="150dp"
-                            android:layout_height="70dp"
-                            android:layout_gravity="center"
-                            android:paddingBottom="8dp"
-                            android:src="@drawable/img_france_flag_list" />
+                    <TextView
+                        android:id="@+id/team2_country_name"
+                        style="@style/CountryName"
+                        android:text="@string/france" />
 
-                    </LinearLayout>
+                    <!-- Team 2 flag image -->
 
-                    <View
-                        android:layout_width="match_parent"
-                        android:layout_height="2dp"
-                        android:layout_marginLeft="20dp"
-                        android:layout_marginRight="20dp"
-                        android:background="@android:color/black" />
+                    <ImageView
+                        android:id="@+id/team2_flag"
+                        style="@style/img_flag"
+                        android:src="@drawable/img_france_flag" />
+
+                    <!-- Team 2 score delimiter horizontal line -->
+
+                    <View style="@style/score_delimiter_line" />
+
+                    <!-- Score points -->
 
                     <TextView
                         android:id="@+id/team2_score"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="sans-serif-light"
-                        android:gravity="center"
-                        android:text="0"
-                        android:textColor="@android:color/black"
-                        android:textSize="56sp"
-                        android:textStyle="bold" />
+                        style="@style/txt_score_points"
+                        android:text="@string/team2_score" />
+
+                    <!-- Goal button -->
 
                     <Button
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
+                        style="@style/button_goal"
                         android:onClick="addScoreT2"
-                        android:text="GOAL!"
-                        android:textSize="20sp" />
+                        android:text="@string/txt_goal" />
 
                 </LinearLayout>
 
@@ -169,177 +121,150 @@
 
     </RelativeLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@android:color/black"
-        android:gravity="center">
+    <!-- Reset layout container -->
+
+    <LinearLayout style="@style/reset_layout">
 
         <Button
-            android:layout_width="wrap_content"
-            android:layout_height="40dp"
-            android:layout_gravity="center"
-            android:layout_marginBottom="8dp"
-            android:layout_marginTop="8dp"
+            style="@style/button_reset"
             android:onClick="resetScore"
-            android:text="RESET" />
+            android:text="@string/txt_reset" />
 
     </LinearLayout>
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="2dp"
-        android:background="@android:color/darker_gray" />
+    <!-- Shadow line -->
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="2">
+    <View style="@style/horizontal_shadow_line" />
 
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            android:scaleType="fitCenter"
-            android:src="@drawable/img_ball_background" />
+    <!-- Main cards layout container -->
 
+    <LinearLayout style="@style/main_cards_layout">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal">
+        <!-- Team 1 cards layout container -->
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:orientation="vertical">
+        <LinearLayout style="@style/cards_layout">
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:orientation="horizontal">
+            <!-- Team 1 yellow card layout -->
 
-                    <ImageButton
-                        android:layout_width="50dp"
-                        android:layout_height="80dp"
-                        android:layout_gravity="center"
-                        android:layout_marginRight="24dp"
-                        android:background="@drawable/img_yellow_card" />
+            <LinearLayout style="@style/team1_card_layout">
 
-                    <TextView
-                        android:id="@+id/team1_yellow_card"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:fontFamily="sans-serif-light"
-                        android:text="0"
-                        android:textColor="@android:color/black"
-                        android:textSize="30sp"
-                        android:textStyle="bold" />
+                <!-- Team 1 yellow card image -->
 
-                </LinearLayout>
+                <ImageButton
+                    style="@style/img_card"
+                    android:layout_marginRight="16dp"
+                    android:background="@drawable/img_yellow_card"
+                    android:onClick="addYellowOnT1" />
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:orientation="horizontal">
+                <!-- Team 1 yellow card points -->
 
-                    <ImageButton
-                        android:layout_width="50dp"
-                        android:layout_height="80dp"
-                        android:layout_gravity="center"
-                        android:layout_marginRight="24dp"
-                        android:background="@drawable/img_red_card" />
-
-                    <TextView
-                        android:id="@+id/team1_red_card"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:fontFamily="sans-serif-light"
-                        android:text="0"
-                        android:textColor="@android:color/black"
-                        android:textSize="30sp"
-                        android:textStyle="bold" />
-
-                </LinearLayout>
+                <TextView
+                    android:id="@+id/team1_yellow_card"
+                    style="@style/txt_card_points"
+                    android:layout_marginRight="16dp"
+                    android:text="@string/team1_yellow_card_points" />
 
             </LinearLayout>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:orientation="vertical">
+            <!-- Team 1 red card layout -->
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:orientation="horizontal">
+            <LinearLayout style="@style/team1_card_layout">
 
-                    <TextView
-                        android:id="@+id/team2_yellow_card"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:fontFamily="sans-serif-light"
-                        android:text="0"
-                        android:textColor="@android:color/black"
-                        android:textSize="30sp"
-                        android:textStyle="bold" />
+                <!-- Team 1 red card image -->
 
-                    <ImageButton
-                        android:layout_width="50dp"
-                        android:layout_height="80dp"
-                        android:layout_gravity="center"
-                        android:layout_marginLeft="24dp"
-                        android:background="@drawable/img_yellow_card" />
+                <ImageButton
+                    style="@style/img_card"
+                    android:layout_marginRight="16dp"
+                    android:background="@drawable/img_red_card"
+                    android:onClick="addRedOnT1" />
 
-                </LinearLayout>
+                <!-- Team 1 red card points -->
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:id="@+id/team2_red_card"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:fontFamily="sans-serif-light"
-                        android:text="0"
-                        android:textColor="@android:color/black"
-                        android:textSize="30sp"
-                        android:textStyle="bold">
-
-                    </TextView>
-
-                    <ImageButton
-                        android:layout_width="50dp"
-                        android:layout_height="80dp"
-                        android:layout_gravity="center"
-                        android:layout_marginLeft="24dp"
-                        android:background="@drawable/img_red_card" />
-
-                </LinearLayout>
+                <TextView
+                    android:id="@+id/team1_red_card"
+                    style="@style/txt_card_points"
+                    android:layout_marginRight="16dp"
+                    android:text="@string/team1_red_card_points" />
 
             </LinearLayout>
 
         </LinearLayout>
 
-    </RelativeLayout>
+        <!-- Team 1 vertical separator line -->
 
+        <View
+            style="@style/card_layout_vertical_line"
+            android:layout_marginRight="8dp" />
+
+        <!-- Fault relative layout -->
+
+        <RelativeLayout style="@style/fault_relative_layout">
+
+            <!-- Fault representative image -->
+
+            <ImageView
+                style="@style/img_fault"
+                android:src="@drawable/img_card_background" />
+
+        </RelativeLayout>
+
+        <!-- Team 2 vertical separator line -->
+
+        <View
+            style="@style/card_layout_vertical_line"
+            android:layout_marginLeft="8dp" />
+
+        <!-- Team 2 cards layout container -->
+
+        <LinearLayout style="@style/cards_layout">
+
+            <!-- Team 2 yellow card layout -->
+
+            <LinearLayout style="@style/team2_card_layout">
+
+                <!-- Team 2 yellow card points -->
+
+                <TextView
+                    android:id="@+id/team2_yellow_card"
+                    style="@style/txt_card_points"
+                    android:layout_marginLeft="16dp"
+                    android:text="@string/team2_yellow_card_points" />
+
+                <!-- Team 2 yellow card image -->
+
+                <ImageButton
+                    style="@style/img_card"
+                    android:layout_marginLeft="16dp"
+                    android:background="@drawable/img_yellow_card"
+                    android:onClick="addYellowOnT2" />
+
+            </LinearLayout>
+
+            <!-- Team 2 red card layout -->
+
+            <LinearLayout style="@style/team2_card_layout">
+
+                <!-- Team 2 red card points -->
+
+                <TextView
+                    android:id="@+id/team2_red_card"
+                    style="@style/txt_card_points"
+                    android:layout_marginLeft="16dp"
+                    android:text="@string/team2_red_card_points" />
+
+                <!-- Team 2 red card image -->
+
+                <ImageButton
+                    style="@style/img_card"
+                    android:layout_marginLeft="16dp"
+                    android:background="@drawable/img_red_card"
+                    android:onClick="addRedOnT2" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
 
 </LinearLayout>
 

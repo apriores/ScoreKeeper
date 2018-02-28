@@ -2,4 +2,13 @@
     <string name="app_name">Score Keeper</string>
     <string name="france">FRANCE</string>
     <string name="romania">ROMANIA</string>
+    <string name="txt_score">S C O R E</string>
+    <string name="team1_score">0</string>
+    <string name="txt_goal">GOAL!</string>
+    <string name="team2_score">0</string>
+    <string name="txt_reset">RESET</string>
+    <string name="team1_red_card_points">0</string>
+    <string name="team1_yellow_card_points">0</string>
+    <string name="team2_red_card_points">0</string>
+    <string name="team2_yellow_card_points">0</string>
 </resources>
