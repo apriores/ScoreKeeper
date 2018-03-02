@@ -22,19 +22,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
-    public void addScoreT1(View v) {
-        team1Score = team1Score + 1;
-        displayTeam1Score(team1Score);
-    }
-
     public void displayTeam1Score(int score) {
         TextView scoreView = (TextView) findViewById(R.id.team1_score);
         scoreView.setText(String.valueOf(score));
-    }
-
-    public void addScoreT2(View v) {
-        team2Score = team2Score +1;
-        displayTeam2Score(team2Score);
     }
 
     public void displayTeam2Score(int score) {
@@ -42,19 +32,9 @@ public class MainActivity extends AppCompatActivity {
         scoreView.setText(String.valueOf(score));
     }
 
-    public void addYellowOnT1(View v) {
-        yellowCardTeam1 = yellowCardTeam1 + 1;
-        displayTeam1YellowCard(yellowCardTeam1);
-    }
-
     public void displayTeam1YellowCard(int score) {
         TextView scoreView = (TextView) findViewById(R.id.team1_yellow_card);
         scoreView.setText(String.valueOf(score));
-    }
-
-    public void addYellowOnT2(View v) {
-        yellowCardTeam2 = yellowCardTeam2 + 1;
-        displayTeam2YellowCard(yellowCardTeam2);
     }
 
     public void displayTeam2YellowCard(int score) {
@@ -62,24 +42,44 @@ public class MainActivity extends AppCompatActivity {
         scoreView.setText(String.valueOf(score));
     }
 
-    public void addRedOnT1(View v) {
-        redCardTeam1 = redCardTeam1 + 1;
-        displayTeam1RedCard(redCardTeam1);
-    }
-
     public void displayTeam1RedCard(int score) {
         TextView scoreView = (TextView) findViewById(R.id.team1_red_card);
         scoreView.setText(String.valueOf(score));
     }
 
-    public void addRedOnT2(View v) {
-        redCardTeam2 = redCardTeam2 + 1;
-        displayTeam2RedCard(redCardTeam2);
-    }
-
     public void displayTeam2RedCard(int score) {
         TextView scoreView = (TextView) findViewById(R.id.team2_red_card);
         scoreView.setText(String.valueOf(score));
+    }
+
+    public void addScoreT1(View v) {
+        team1Score = team1Score + 1;
+        displayTeam1Score(team1Score);
+    }
+
+    public void addScoreT2(View v) {
+        team2Score = team2Score +1;
+        displayTeam2Score(team2Score);
+    }
+
+    public void addYellowOnT1(View v) {
+        yellowCardTeam1 = yellowCardTeam1 + 1;
+        displayTeam1YellowCard(yellowCardTeam1);
+    }
+
+    public void addYellowOnT2(View v) {
+        yellowCardTeam2 = yellowCardTeam2 + 1;
+        displayTeam2YellowCard(yellowCardTeam2);
+    }
+
+    public void addRedOnT1(View v) {
+        redCardTeam1 = redCardTeam1 + 1;
+        displayTeam1RedCard(redCardTeam1);
+    }
+
+    public void addRedOnT2(View v) {
+        redCardTeam2 = redCardTeam2 + 1;
+        displayTeam2RedCard(redCardTeam2);
     }
 
     public void resetScore(View v) {
